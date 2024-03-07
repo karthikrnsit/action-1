@@ -4,8 +4,7 @@ jobs:
   second_job:
     runs-on: ubuntu-latest
     steps:
-      - name: Simple 
-        run: |
-            echo "verify"
-            ls -altr
+      - name: Executing shell script 
+        run: ./sampleScript.sh
+            
 
