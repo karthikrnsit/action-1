@@ -30,4 +30,15 @@ jobs:
         run: |
          chmod +x sampleScript.sh
          ./sampleScript.sh
-  
+  Third:
+    runs-on: ubuntu-latest
+    needs: first_job
+    steps:
+      - name: checkout 
+        uses: actions/checkout@v4
+      - name: download artificats
+        uses: actions/download-artifact@v4
+        with:
+          name: sample file
+      - name: Executing shell script 
+        run: cat file3.txt
