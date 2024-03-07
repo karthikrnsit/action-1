@@ -1,17 +1,17 @@
 name: TestEnviromentVariable
 on: push
+env:
+    TEST: Karthik
+    TEST2: Sandhya
 
 jobs:
-   First:
-    env:
-       TEST: Karthik
+   First:   
     runs-on: ubuntu-latest
     steps:
         - name: verify
           run: echo $TEST
         - name: step variable
-          env:
-             TEST2: Sandhya
+             
           run: echo $TEST $TEST2
     
     
