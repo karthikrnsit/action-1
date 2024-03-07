@@ -1,11 +1,11 @@
-name: Test
+name: verify
 on: push
-
 jobs:
-  first_job:
+  second_job:
     runs-on: ubuntu-latest
     steps:
-      - name: Welcome message
-        run: echo "My first github action"
-      - name: list files
-        run: ls
+      - name: Tervify
+        run: echo "verify"
+      - name: secondverify
+        run: echo "vvvv"
+
