@@ -6,6 +6,8 @@ jobs:
     steps:
       - name: checkout 
         uses: actions/checkout@v4
+      - name: list files
+        run: ls -altr
       - name: Executing shell script 
         run: |
          chmod +x sampleScript.sh
