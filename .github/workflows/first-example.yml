@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Executing shell script 
-        run: ./sampleScript.sh
+        run: |
+         chmod +x sampleScript.sh
+         ./sampleScript.sh
             
 
