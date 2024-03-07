@@ -7,33 +7,27 @@ jobs:
     steps:
       - name: checkout 
         uses: actions/checkout@v4
-      - name: list files
-        run: ls -altr
       - name: Executing shell script 
         run: |
          chmod +x sampleScript.sh
          ./sampleScript.sh
+      - name: upload the file3
+        uses: actions/upload-artifacts@v3
+        with:
+          name: sample file 
+          path: file3.txt
   second_job:
     runs-on: ubuntu-latest
     needs: first_job
     steps:
       - name: checkout 
         uses: actions/checkout@v4
-      - name: list files
-        run: ls -altr
+      - name: download artificats
+        uses: actions/download-artifacts@v3
+        with:
+          name: sample file
       - name: Executing shell script 
         run: |
          chmod +x sampleScript.sh
          ./sampleScript.sh
-  third_job:
-    runs-on: ubuntu-latest
-    needs: second_job
-    steps:
-      - name: checkout 
-        uses: actions/checkout@v4
-      - name: list files
-        run: ls -altr
-      - name: Executing shell script 
-        run: |
-         chmod +x sampleScript.sh
-         ./sampleScript.sh
+  
