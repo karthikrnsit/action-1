@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Simple 
-        run: |
+        run: 
             echo "verify"
             ls -altr
 
