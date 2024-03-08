@@ -35,7 +35,7 @@ jobs:
              
           run: echo $TEST $TEST2
    second:   
-    timeout-minutes: 10
+    timeout-minutes: 1
     runs-on: ubuntu-latest
     steps:
         - name: verify
