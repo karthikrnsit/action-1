@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: verify
-          run: echo $TEST
+          run: echo $TEST ${{inputs.TEST}} ${{inputs.TEST2}} ${{inputs.TEST3}}
         - name: step variable
              
           run: echo $TEST $TEST2
