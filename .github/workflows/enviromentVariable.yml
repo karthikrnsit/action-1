@@ -1,5 +1,5 @@
 name: TestEnviromentVariable
-on: push
+on: workflow_dispatch
 env:
     TEST: Karthik
     TEST2: Sandhya
