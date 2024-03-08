@@ -1,5 +1,26 @@
 name: TestEnviromentVariable
-on: workflow_dispatch
+on: 
+    workflow_dispatch:
+        inputs:
+            TEST:
+                required: true
+                default: AARUSH
+                description: Simple Testing
+                type: string
+            Test2:
+                required: true
+                default: Magic
+                description: Test Magic
+                type: string
+            Test3:
+                required: true
+                default: debug
+                description: Enviroment 
+                type: choice
+                options:
+                    - debug
+                    - info
+
 env:
     TEST: Karthik
     TEST2: Sandhya
