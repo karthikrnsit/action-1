@@ -10,4 +10,4 @@ jobs:
         runs-on: ${{matrix.os}}
         steps:
             - name: OS ${{matrix.os}}
-              run: docker run ${{matrix.os}}
+              run: docker run ${{matrix.image}}
